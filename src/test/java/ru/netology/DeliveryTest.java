@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.data.DataGenerator;
+import ru.netology.DataGenerator;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -16,12 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import java.time.Duration;
 
 class DeliveryTest {
-    @BeforeAll
-    static void setUp() {
-        // Настраиваем WebDriverManager
-        io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
-        Configuration.browser = "chrome";
-    }
+
     @BeforeEach
     void setup() {
         open("http://localhost:9999");
